@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<f:subview id="header">
+
+	<h:form>
+		<div style="float: right;">
+			<h:inputText value="#{catalog.keyword}" />
+			<h:commandButton action="#{catalog.doSearch}" value="Search" />
+
+			<div style="margin-top: 20px;">
+				<c:choose>
+					<c:when test="${empty sessionScope.account}">
+						<h:commandLink action="signon">
+							<h:outputText value="Sign on" />
+						</h:commandLink>
+					</c:when>
+
+					<c:otherwise>
+						<h:commandLink action="showaccount">
+							<h:outputText value="Account" />
+						</h:commandLink>
+                        &nbsp;&nbsp;&nbsp;
+                        <h:commandLink action="showcart">
+							<h:outputText value="Cart" />
+						</h:commandLink>
+                        &nbsp;&nbsp;&nbsp;
+                        <h:commandLink action="#{account.doSignOff}">
+							<h:outputText value="Sign off" />
+						</h:commandLink>
+					</c:otherwise>
+				</c:choose>
+			</div>
+		</div>
+		<h:commandLink action="petStoreWeb/main">
+			<h:graphicImage url="images/banner_logo.gif" />
+		</h:commandLink>
+	</h:form>
+</f:subview>
+</html>

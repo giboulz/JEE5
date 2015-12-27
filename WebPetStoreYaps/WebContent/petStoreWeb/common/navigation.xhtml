@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<f:subview id="sidebar">
+
+	<h:form>
+		<h:panelGrid columns="1">
+			<f:facet name="header">
+				<h:outputText value="Pets" styleClass="sectionTitle" />
+			</f:facet>
+
+			<h:commandLink action="#{catalog.doFindProducts}">
+				<h:outputText value="Birds" />
+				<f:param name="categoryId" value="5" />
+			</h:commandLink>
+
+			<h:commandLink action="#{catalog.doFindProducts}">
+				<h:outputText value="Cats" />
+				<f:param name="categoryId" value="4" />
+			</h:commandLink>
+
+			<h:commandLink action="#{catalog.doFindProducts}">
+				<h:outputText value="Dogs" />
+				<f:param name="categoryId" value="2" />
+			</h:commandLink>
+
+			<h:commandLink action="#{catalog.doFindProducts}">
+				<h:outputText value="Fish" />
+				<f:param name="categoryId" value="1" />
+			</h:commandLink>
+
+			<h:commandLink action="#{catalog.doFindProducts}">
+				<h:outputText value="Reptiles" />
+				<f:param name="categoryId" value="3" />
+			</h:commandLink>
+		</h:panelGrid>
+	</h:form>
+
+</f:subview>
+</html>
