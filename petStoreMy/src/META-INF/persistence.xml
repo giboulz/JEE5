@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	
+	<persistence-unit name="petStorePU" transaction-type="JTA">
+
+		<!-- Data source definition -->
+		<jta-data-source>jdbc/__default</jta-data-source>
+
+		<class>com.gbz.yaps.petstore.entity.catalog.Category</class>
+		<class>com.gbz.yaps.petstore.entity.catalog.Product</class>
+		<class>com.gbz.yaps.petstore.entity.catalog.Item</class>
+		<class>com.gbz.yaps.petstore.entity.customer.Customer</class>
+		<class>com.gbz.yaps.petstore.entity.Address</class>
+		<class>com.gbz.yaps.petstore.entity.order.Order</class>
+		<class>com.gbz.yaps.petstore.entity.order.OrderLine</class>
+		<class>com.gbz.yaps.petstore.entity.order.CreditCard</class>
+
+
+		<properties>
+			<property name="toplink.target-database" value="Derby" />
+		</properties>
+
+
+	</persistence-unit>
+</persistence>
