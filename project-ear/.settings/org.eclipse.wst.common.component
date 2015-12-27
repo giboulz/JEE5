@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="project-ear">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="ejb-project.jar" deploy-path="/" handle="module:/resource/ejb-project/ejb-project">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="petStoreMy.jar" deploy-path="/lib" handle="module:/resource/petStoreMy/petStoreMy">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ejb-interface.jar" deploy-path="/lib" handle="module:/resource/ejb-interface/ejb-interface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="WebPetStoreYaps.war" deploy-path="/" handle="module:/resource/WebPetStoreYaps/WebPetStoreYaps">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
