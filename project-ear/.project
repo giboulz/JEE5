@@ -7,6 +7,7 @@
 		<project>petStoreMy</project>
 		<project>ejb-interface</project>
 		<project>WebPetStoreYaps</project>
+		<project>WebServiceRest</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
